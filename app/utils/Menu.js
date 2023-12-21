@@ -1,8 +1,8 @@
-import inquirer from 'inquirer';
+const inquirer = require('inquirer');
 
-export default class Menu {
+class Menu {
 
-    static askText(message='Nombre del template??') {
+    static askText(message='Nombre del template:') {
 
         const questions = [
             {
@@ -15,3 +15,5 @@ export default class Menu {
         return inquirer.prompt(questions);
     }
 }
+
+module.exports = Menu;

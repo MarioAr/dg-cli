@@ -1,6 +1,6 @@
 
 
-export default class String {
+class String {
 
     static capitalize(string) {
         return string?.charAt(0).toUpperCase() + string.slice(1) || '';
@@ -34,6 +34,8 @@ export default class String {
     }
 
     static replaceVariableName(string, variableName) {
+        // console.log('>>>>>>>>>>>')
+        // console.log(variableName)
         return string.replace(/\[\$feature\]/g, variableName);
     }
 
@@ -41,3 +43,8 @@ export default class String {
         return string.replace(/\[\$file_name\]/g, fileName);
     }
 }
+
+module.exports = String;
+
+// const test = String.toUpperCamelCase('eeee');
+// console.log(test);

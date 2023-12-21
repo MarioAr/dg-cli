@@ -3,20 +3,16 @@
   "version": "1.0.0",
   "main": "app/mauro.js",
   "license": "MIT",
+  "bin": {
+    "dg": "app/mauro.js"
+  },
   "scripts": {
     "start": "node app/mauro.js",
-    "compile": "pkg app/mauro.js --out-path dist --targets node16-linux-arm64"
+    "compile": "npx pkg app/mauro.js --out-path dist --targets node16-linux-x64",
+    "compile:all": "npx pkg app/mauro.js --out-path dist"
   },
   "dependencies": {
     "colors": "^1.4.0",
-    "inquirer": "^9.2.12"
-  },
-  "pkg": {
-    "scripts": "app/**/*.js",
-    "assets": "app/**/*",
-    "targets": [
-      "node16-linux-arm64"
-    ],
-    "outputPath": "dist"
+    "inquirer": "^8.0.0"
   }
 }
