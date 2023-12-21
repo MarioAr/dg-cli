@@ -3,7 +3,7 @@ part of '[$file_name]_connector.dart';
 class _[$feature]ViewModel extends Vm {
   ..props;
 
-  _BiometryCheckViewModel({
+  _[$feature]ViewModel({
     ..props,
   }) : super(equals: [..props]);
 }

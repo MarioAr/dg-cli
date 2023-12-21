@@ -5,6 +5,7 @@ const colors = require('colors');
 const FileGenerator = require('./modules/FileGenerator.js');
 const Menu = require('./utils/Menu.js');
 const PathWork = require('./utils/PathWork.js');
+const String = require('./utils/String.js');
 
 // Obtén la ruta del directorio del ejecutable
 const executableDir = process.cwd(); //path.dirname(process.execPath);
@@ -44,7 +45,7 @@ function getFileName(i) {
             console.log(colors.red(`🔨 🔨 🔨 🔨 `));
             return;
         }
-        const TARGET_PATH_NAME = `${TARGET}/${name.toLowerCase()}`;
+        const TARGET_PATH_NAME = `${TARGET}/${String.toSnakeCase(name)}`;
 
         console.log(colors.green(`Creando directorio: ${TARGET_PATH_NAME}`));
         console.log();
