@@ -1,3 +1,5 @@
+#! /usr/bin/env node 
+
 const path = require('path');
 const colors = require('colors');
 const FileGenerator = require('./modules/FileGenerator.js');
@@ -5,7 +7,7 @@ const Menu = require('./utils/Menu.js');
 const PathWork = require('./utils/PathWork.js');
 
 // Obtén la ruta del directorio del ejecutable
-const executableDir = path.dirname(process.execPath);
+const executableDir = process.cwd(); //path.dirname(process.execPath);
 
 const TARGET = path.join(executableDir,`lib/presentation`);
 const TARGET_PATH = path.join('../', TARGET);

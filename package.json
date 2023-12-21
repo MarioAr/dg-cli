@@ -1,13 +1,13 @@
 {
-  "name": "cli",
+  "name": "dgm-cli",
   "version": "1.0.0",
   "main": "app/mauro.js",
   "license": "MIT",
   "bin": {
-    "dg": "app/mauro.js"
+    "dgm": "./app/mauro.js"
   },
   "scripts": {
-    "start": "node app/mauro.js",
+    "start": "node ./app/mauro.js",
     "compile": "npx pkg app/mauro.js --out-path dist --targets node16-linux-x64",
     "compile:all": "npx pkg app/mauro.js --out-path dist"
   },
